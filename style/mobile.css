@@ -1,0 +1,212 @@
+.menupc {
+  display: none;
+}
+
+.OpenNav {
+  margin-left: 5%;
+  color: #f1f1f1;
+}
+
+header {
+  background-image: linear-gradient(#095776, #00b0f6);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 0 20px #ff17aa;
+  animation: colorchange 3s infinite;
+}
+
+.sidenav a {
+  font-size: 18px;
+}
+
+.sidenav {
+
+  padding-top: 15px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.menupc {
+  display: none;
+
+}
+
+.banner {
+  width: 100%;
+  height: 35vh;
+  margin-bottom: 5px;
+}
+
+.banner .imgBanner {
+  width: 100%;
+  height: 20vh;
+  padding: 25px;
+}
+
+.img-capa::after {
+  border-radius: 0;
+  background: linear-gradient(.15turn, transparent 50%, #1e91c6),
+    linear-gradient(.5turn, transparent 30%, #7d7d7d),
+    linear-gradient(1turn, transparent 30%, #50a1c6);
+  z-index: 0;
+}
+
+.banner .imgBanner img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  #about {
+    flex-direction: column;
+  }
+
+  .background-about,
+  .box-about,
+  .saibaMais {
+    width: 100%;
+  }
+
+  .box-about {
+    height: auto;
+  }
+
+  .MVV-container,
+  .produtos-banner {
+    height: auto;
+  }
+
+  .produtos img {
+    width: 100%;
+    height: auto;
+  }
+
+  #produtos-container {
+    grid-template-columns: 1fr, 1fr;
+  }
+
+  .whatsapp-button {
+    display: none;
+  }
+}
+
+.MVV-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  align-items: center;
+  margin-top: 50%;
+
+
+
+}
+
+.MVV {
+
+  background-color: #5e983765;
+  display: block;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-top: 5%;
+  padding: 25px;
+
+}
+
+.MVV p {
+
+  width: 100%;
+}
+
+.MVV-container .MVV-title {
+  display: flex;
+  color: #7b49a9;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  width: 100%;
+
+}
+
+
+.saibaMais {
+  display: flex;
+  margin: auto;
+  margin-top: 5%;
+  width: 60%;
+  height: 25vh;
+
+}
+
+
+.produtos-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  border: 5px solid #3343ef;
+  height: 30vh;
+}
+
+.produtos-banner h3 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+
+
+.produtos img {
+  width: 100%;
+
+}
+
+#produtos-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 50px;
+
+}
+
+
+.produtos-title {
+  font-size: 1rem;
+}
