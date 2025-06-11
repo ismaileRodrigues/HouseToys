@@ -453,11 +453,14 @@ header {
 
 .modal-content {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 50%;
+  max-height: 80%;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
+  margin-left: 25%;
+    margin-top: 5.5%;
+
 }
 
 .modal-content img {
@@ -684,6 +687,10 @@ footer {
   
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .modal-content {
+      margin-top: 50%;
+    margin-left: 5%
   }
 }
 
