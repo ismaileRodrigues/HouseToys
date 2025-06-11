@@ -50,7 +50,7 @@ mobileLinks.forEach(link => {
       e.preventDefault();
       
       const name = document.getElementById('name').value;
-      // const email = document.getElementById('email').value;
+      const email = document.getElementById('email').value;
       const phone = document.getElementById('phone').value;
       const message = document.getElementById('message').value;
 
@@ -58,7 +58,7 @@ mobileLinks.forEach(link => {
       if (name  && phone && message) {
         // Format the message for WhatsApp
         const whatsappNumber = '5541998281626'; // Your WhatsApp number
-        const formattedMessage = `Nova mensagem de ${name} %0ATelefone: ${phone}%0AMensagem: ${message}`;
+        const formattedMessage = `Nova mensagem de ${name} %0ATelefone: ${phone} %0AEmail: ${email} %0AMensagem: ${message}`;
         const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${formattedMessage}`;
         
         // Redirect to WhatsApp
@@ -71,3 +71,55 @@ mobileLinks.forEach(link => {
         alert('Por favor, preencha todos os campos.');
       }
     });
+
+    $(document).ready(function() {
+  // Mobile Menu Toggle
+  $('#menuToggle').click(function() {
+    $('#mobileNav').addClass('active');
+    $('#overlay').addClass('active');
+  });
+
+  $('#closeBtn').click(function() {
+    $('#mobileNav').removeClass('active');
+    $('#overlay').removeClass('active');
+  });
+
+  $('#overlay').click(function() {
+    $('#mobileNav').removeClass('active');
+    $('#overlay').removeClass('active');
+  });
+
+  // Header Scroll Effect
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+      $('#header').addClass('header-scrolled');
+    } else {
+      $('#header').removeClass('header-scrolled');
+    }
+  });
+
+  // Modal Functionality
+  $('.modal-trigger').click(function() {
+    const imgSrc = $(this).attr('src');
+    $('#modalImage').attr('src', imgSrc);
+    $('#imageModal').fadeIn();
+  });
+
+  $('.modal-close').click(function() {
+    $('#imageModal').fadeOut();
+  });
+
+  // Close modal when clicking outside the image
+  $('#imageModal').click(function(e) {
+    if ($(e.target).hasClass('modal')) {
+      $('#imageModal').fadeOut();
+    }
+  });
+
+  // Form Submission (Placeholder)
+  $('#contactForm').submit(function(e) {
+    e.preventDefault();
+    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+    this.reset();
+  });
+});
